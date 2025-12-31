@@ -1,7 +1,13 @@
 {
   "buildCommand": "npm run build:admin",
   "outputDirectory": "dist-admin",
-  "framework": "vite",
-  "installCommand": "npm install"
+  "framework": null,
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
 
