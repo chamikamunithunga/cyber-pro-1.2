@@ -1,19 +1,24 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "npm run build:website",
+  "outputDirectory": "dist-website",
+  "framework": null,
+  "installCommand": "npm install",
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist-website"
-      }
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
-
