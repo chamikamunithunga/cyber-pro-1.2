@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build:admin",
+  "outputDirectory": "dist-admin",
+  "framework": "vite",
+  "installCommand": "npm install"
+}
+

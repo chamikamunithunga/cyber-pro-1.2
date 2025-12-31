@@ -1,0 +1,34 @@
+{
+  "name": "cyber-pro-sale",
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:website": "vite --config vite.config.website.js",
+    "dev:admin": "vite --config vite.config.admin.js",
+    "build": "vite build",
+    "build:website": "vite build --config vite.config.website.js",
+    "build:admin": "vite build --config vite.config.admin.js && node scripts/post-build-admin.js",
+    "preview": "vite preview",
+    "preview:website": "vite preview --outDir dist-website",
+    "preview:admin": "vite preview --outDir dist-admin --port 3001"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "firebase": "^10.7.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8",
+    "concurrently": "^8.2.2"
+  }
+}
+
